@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratham's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Include Timeline.js Library -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/timelinejs@3.6.4/dist/timeline.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/timelinejs@3.6.4/dist/timeline.css" />
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img src="/profile.jpg" alt="Pratham's Photo" class="profile-photo">
+        <div class="header-container">
+            <h1>Hi, I'm Pratham </h1>
+            <p> Aspiring Web Developer | Passionate Programmer</p>
+<!-- Dark Mode Toggle Button -->
+<button class="theme-toggle" aria-label="Toggle Dark Mode">🌙 </button>
+<p id="theme-status">Current Mode: Light</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#timeline"> Journey</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <a href="surprise.html" id="surprise-link" style="display: none;">Surprise Link</a>
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <p>
+                🚀 I'm a third-year Information Technology engineering student with a passion for coding and web development. 🌐 Currently, I'm sharpening my skills and building projects that allow me to explore the endless possibilities of the digital world. From front-end design to back-end logic, I enjoy creating seamless user experiences and diving into new technologies. 💻 My journey is fueled by curiosity, and I'm excited about learning every step of the way.💡 I'm always looking for new challenges and opportunities to grow in the ever-evolving world of technology. 🌟
+
+            </p>
+        </div>
+    </section>
+
+        <!-- Resume Section -->
+        <section id="resume">
+            <h2>Resume</h2>
+            <p>Download my resume to learn more about my education, skills, and projects.</p>
+            <a href="path/to/your-resume.pdf" download class="resume-download-btn">
+                <i class="fas fa-download"></i> Download Resume
+            </a>
+        </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project">
+            <div class="project-card">
+                <h3>Word Voyage</h3>
+                <p>A dictionary application featuring Word of the Day, favorites, search history, and English-to-Marathi translation.</p>
+                <a href="https://github.com/Prathaam08/Dictionary-Application.git" target="_blank">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>My Skills</h2>
+        <ul>
+            <li>Frontend: HTML, CSS, JavaScript</li>
+            <li>Backend: Node.js, Express.js</li>
+            <li>Database: MongoDB, Mongoose</li>
+            <li>Languages: Java</li>
+        </ul>
+    </section>
+
+    <!-- Certifications Section -->
+<section id="certifications">
+    <h2>Certifications</h2>
+    <div class="certifications-container">
+        <!-- Certification Card 1 -->
+        <div class="certification-card">
+            <h3>Web Development Fundamentals</h3>
+            <p>Certified by IBM</p>
+            <button class="view-cert-btn" onclick="openCertificate('cert-wb')">View Certificate</button>
+        </div>
+
+        <!-- Certification Card 2 -->
+        <div class="certification-card">
+            <h3>Getting Started with Artificial Intellige</h3>
+            <p>Certified by IBM</p>
+            <button class="view-cert-btn" onclick="openCertificate('cert-ai')">View Certificate</button>
+        </div>
+
+        <!-- Certification Card 3 -->
+        <div class="certification-card">
+            <h3>Developer and Technology Job Simulation</h3>
+            <p>Certified by Accenture</p>
+            <button class="view-cert-btn" onclick="openCertificate('cert-dt')">View Certificate</button>
+        </div>
+
+        <div class="certification-card">
+            <h3>Solution Architecture Job Simulation</h3>
+            <p>Certified by AWS</p>
+            <button class="view-cert-btn" onclick="openCertificate('cert-sa')">View Certificate</button>
+        </div>
+
+        <div class="certification-card">
+            <h3>What Is Generative AI?</h3>
+            <p>Certified by linkedin</p>
+            <button class="view-cert-btn" onclick="openCertificate('cert-na')">View Certificate</button>
+        </div>
+
+        <div class="certification-card">
+            <h3>Fundamentals of Agentic AI: Business Implications and Ethical Insights</h3>
+            <p>Certified by linkedin</p>
+            <button class="view-cert-btn" onclick="openCertificate('cert-linkedin ai')">View Certificate</button>
+        </div>
+
+        <div class="certification-card">
+            <h3>Introduction to Prompt Engineering
+                for Generative AI (2023)
+                </h3>
+            <p>Certified by linkedin</p>
+            <button class="view-cert-btn" onclick="openCertificate('cert-linkedin prompt')">View Certificate</button>
+        </div>
+
+        <div class="certification-card">
+            <h3>AI for Students: Build Your Own Generative AI Model</h3>
+            <p>Certified by NextWave</p>
+            <button class="view-cert-btn" onclick="openCertificate('cert-next')">View Certificate</button>
+        </div>
+
+        <div class="certification-card">
+            <h3>Public Speaking Course: Improve Your Speaking Skills Fast</h3>
+            <p>Certified by Eduta</p>
+            <button class="view-cert-btn" onclick="openCertificate('cert-pubspeak')">View Certificate</button>
+        </div>
+    </div>
+</section>
+
+<!-- Modal for Viewing Certificates -->
+<div id="certModal" class="modal">
+    <span class="close" onclick="closeCertificate()">&times;</span>
+    <iframe id="certPdf" class="cert-iframe" frameborder="0"></iframe>
+    <a id="certDownloadLink" href="#" class="download-btn" download>Download Certificate</a>
+</div>
+    
+<section id="timeline">
+    <h2>My Professional Journey</h2>
+    <div class="timeline-container">
+        <div class="timeline-item">
+            <div class="timeline-date">2020</div>
+            <div class="timeline-content">
+                <h3>10th Grade</h3>
+                <p>Completed my 10th grade from SSN High School. I developed a keen interest in technology and science.</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-date">2022</div>
+            <div class="timeline-content">
+                <h3>12th Grade</h3>
+                <p>Graduated from 12th grade with a focus on science.I prepared for various entrance exams to pursue engineering.</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-date">2022-
+                 <span> 2026</span></div>
+            <div class="timeline-content">
+                <h3>Bachelor of Engineering in Information Technology (BE) </h3>
+                <p>Currently pursuing a Bachelor's degree in Engineering at A.C patil college of engineering, specializing in Information Technology. I'm working on projects that combine my passion for coding and web development.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:morepratham48@gmail.com">morepratham48@gmail.com</a></p>
+        <div class="social-links">      
+            <a href="https://github.com/Prathaam08" target="_blank" class="social-icon github">
+                <i class="fab fa-github"></i> 
+            </a>
+            <a href="https://www.linkedin.com/in/pratham-more-75636b281/" target="_blank" class="social-icon linkedin">
+                <i class="fab fa-linkedin"></i> 
+            </a>
+            <a href="https://www.instagram.com/i.prathaam/" target="_blank" class="social-icon instagram">
+                <i class="fab fa-instagram"></i>
+                </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Prathaam. All rights reserved.</p>
+    </footer>
+
+    <div class="easter-egg" style="position: absolute; top: 20px; right: 20px;">
+        <div class="hidden-message">🎉 Surprise! You found me!</div>
+    </div>
+
+
+<script src="script.js"></script>
+<script src="greeting.js"></script>
+
+</body>
+</html>
