@@ -1,0 +1,881 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f3f4f6;
+}
+
+.profile-photo {
+    width: 150px; /* Adjusted size */
+    height: 150px; /* Adjusted size */
+    border-radius: 50%; /* Keeps the image circular */
+    object-fit: cover; /* Ensures the image scales nicely */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+}
+
+
+
+.profile-photo:hover {
+    transform: scale(1.1); /* Adds a hover effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Header Styling */
+header {
+    margin: -29px 0px;
+    background: linear-gradient(135deg, #6c63ff, #3f37c9);
+    color: #fff;
+    padding: 0.5rem 0.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: flex-start; /* Align items to the left */
+}
+
+.profile-photo header {
+    width: 100px; /* Adjust size as needed */
+    height: 100px;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover; /* Ensure the image scales nicely */
+    margin-right: 20px; /* Space between photo and text */
+}
+
+.header-container{
+    margin: 0px 55px;
+}
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    text-align: left; /* Keep text aligned to the left */
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-align: left; /* Keep text aligned to the left */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 6em;
+    gap: 1rem;
+    animation: fadeIn 1.5s ease-out;
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: #fff;
+    color: #3f37c9;
+    border-color: #fff;
+}
+
+/* Dark Mode Toggle */
+.theme-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#theme-status{
+    font-size: 15px;
+}
+
+/* Section Styling */
+section {
+    padding: 6rem 3rem;
+    max-width: 1200px;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjusted shadow for all sections */
+    border-radius: 20px;
+}
+
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    color: #3f37c9;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: linear-gradient(135deg, #6c63ff, #3f37c9);
+    margin: 0.5rem auto;
+    border-radius: 50px;
+}
+
+
+/* About Section Styling */
+.about-container {
+    display: flex;
+    flex-direction: column; /* Adjust this for different screen sizes */
+    align-items: center;
+    gap: 1.5rem;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .about-container {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .about-container p {
+        max-width: 600px;
+    }
+}
+
+
+.about-container p{
+    margin:auto;
+}
+
+
+/* Projects Section */
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease-out;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+    font-size: 1.8rem;
+    color: #3f37c9;
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.project-card a {
+    text-decoration: none;
+    color: #6c63ff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.project-card a:hover {
+    color: #3f37c9;
+}
+
+/* Skills Section */
+#skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#skills ul li {
+    background: linear-gradient(135deg, #3f37c9, #6c63ff);
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#skills ul li:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+.certifications-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.certification-card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.certification-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+#resume {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    margin: auto;
+}
+
+.resume-download-btn {
+    margin-top: 25px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #3f37c9;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.resume-download-btn:hover {
+    background-color: #2c2c82;
+}
+
+
+/* Contact Section */
+#contact p {
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 1.1rem;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+    color: #3f37c9;
+}
+
+/* Social Links Styling */
+
+.social-links {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.social-links a {
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 2rem; /* Icon size */
+    color: #000; /* Default color */
+    transition: transform 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.social-links a i {
+    margin-right: 8px;
+}
+
+/* GitHub Color */
+.social-icon.github {
+    color: #181717; /* Original GitHub color */
+}
+
+.social-icon.github:hover {
+    color: #24292f; /* Darker shade of GitHub color on hover */
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* LinkedIn Color */
+.social-icon.linkedin {
+    color: #0a66c2; /* Original LinkedIn color */
+}
+
+.social-icon.linkedin:hover {
+    color: #004182; /* Darker shade of LinkedIn color on hover */
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.social-icon.instagram {
+        color: #E4405F; /* Instagram's official pink-red color */
+}
+
+
+
+
+
+
+
+/* Footer */
+footer {
+    background: #3f37c9;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .project-card {
+        width: 90%;
+    }
+
+    #skills ul li {
+        font-size: 0.9rem;
+        padding: 0.8rem 1.5rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Dark Mode Styles */
+body.dark-theme {
+    background: #121212; /* Darker background */
+    color: #e0e0e0; /* Lighter text color for better readability */
+}
+
+/* Header in Dark Mode */
+body.dark-theme header {
+    background: linear-gradient(135deg, #212121, #333); /* Darker gradient for header */
+}
+
+/* Navigation in Dark Mode */
+body.dark-theme nav ul li a {
+    color: #e0e0e0; /* Lighter color for links */
+}
+
+body.dark-theme nav ul li a:hover {
+    background: #444; /* Darker hover background */
+    color: #ffffff; /* White text on hover */
+    border-color: #e0e0e0; /* Light border for contrast */
+}
+
+/* About Section */
+body.dark-theme .about-container {
+    color: #e0e0e0; /* Light text color */
+}
+
+body.dark-theme .profile-photo {
+    border: 3px solid #444; /* Darker border around the profile image */
+}
+
+body.dark-theme #resume {
+    background:#121212 ; /* Darker gradient for skill badges */
+}
+
+/* Project Cards */
+body.dark-theme .project-card {
+    background: #2c2c2c; /* Darker background for project cards */
+    color: #e0e0e0; /* Light text for cards */
+}
+
+body.dark-theme .project-card:hover {
+    background: black; /* Slightly lighter background on hover */
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4); /* Darker shadow for more contrast */
+}
+
+body.dark-theme .project-card p{
+    color: #e0e0e0; /* Light text color */
+}
+
+body.dark-theme .project-card h3 {
+    color: #bb86fc; /* Lighter accent color for project titles */
+}
+
+/* Skills Section */
+body.dark-theme #skills ul li {
+    background: linear-gradient(135deg, #333, #444); /* Darker gradient for skill badges */
+}
+
+body.dark-theme #skills ul li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* Social Links */
+body.dark-theme .social-links a {
+    color: #e0e0e0; /* Light text color for social icons */
+}
+
+body.dark-theme .social-links a:hover {
+    color: #bb86fc; /* Accent color on hover */
+}
+
+/* Footer */
+body.dark-theme footer {
+    background: #333; /* Darker footer background */
+}
+
+/* Scroll to Top Button */
+body.dark-theme #scrollToTopBtn {
+    background-color: #444; /* Slightly lighter background */
+    color: #e0e0e0; /* Light text for the button */
+}
+
+body.dark-theme #scrollToTopBtn:hover {
+    background-color: #555; /* Lighter background on hover */
+    color: #fff;
+}
+
+/* Dark Mode for Certifications */
+body.dark-theme .certifications-container {
+    background-color: #121212; /* Dark background for the certifications section */
+}
+
+body.dark-theme .certification-card {
+    background-color: #2c2c2c; /* Dark background for each certification card */
+    color: #e0e0e0; /* Lighter text color */
+    border: 1px solid #444; /* Darker border */
+}
+
+body.dark-theme .certification-card:hover {
+    transform: translateY(-5px); /* Hover effect remains the same */
+    background-color: #333; /* Slightly lighter background on hover */
+}
+
+body.dark-theme .certification-card h3 {
+    color: #bb86fc; /* Lighter color for the certification title */
+}
+
+body.dark-theme .certification-card p {
+    color: #e0e0e0; /* Lighter color for the certification description */
+}
+
+body.dark-theme .certification-card .view-cert-btn {
+    background-color: #3f37c9; /* Keep the button color consistent */
+    color: #fff;
+}
+
+body.dark-theme .certification-card .view-cert-btn:hover {
+    background-color: #2b2c91; /* Slightly darker button color on hover */
+}
+
+body.dark-theme .modal {
+    background: rgba(0, 0, 0, 0.9); /* Darker background for the modal */
+}
+
+body.dark-theme .modal .cert-iframe {
+    background-color: #2c2c2c; /* Dark background for the iframe */
+}
+
+body.dark-theme .modal .close {
+    color: white; /* White close button for visibility */
+}
+
+body.dark-theme .modal .download-btn {
+    background-color: #28a745; /* Green download button */
+}
+
+body.dark-theme .modal .download-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+body.dark-theme .social-icon.linkedin {
+    color:#0a66c2 ; /* Light text color for social icons */
+}
+
+body.dark-theme .social-icon.instagram {
+    color:#E4405F ; /* Light text color for social icons */
+}
+
+body.dark-theme .greeting {
+    color: #e0e0e0; /* Light color for dark mode */
+}
+
+/* Dark Mode Styles for Professional Journey Timeline */
+body.dark-theme #timeline {
+    background-color: #121212; /* Dark background for the section */
+    color: #e0e0e0; /* Light text color */
+}
+
+body.dark-theme #timeline h2 {
+    color: #bb86fc; /* Light accent color for the section title */
+}
+
+body.dark-theme .timeline-container {
+    display: flex;
+    flex-direction: column;
+}
+
+body.dark-theme .timeline-item {
+   
+    border-radius: 20px;
+    background-color: #121212; /* Dark background for each item */
+    color: #e0e0e0; /* Light text color */
+}
+
+body.dark-theme .timeline-date {
+    color: #03dac6; /* Accent color for dates */
+}
+
+body.dark-theme .timeline-item h3 {
+    color: #bb86fc; /* Light color for job titles */
+}
+
+body.dark-theme .timeline-item p {
+    color: #2c2c2c; /* Light text color for paragraphs */
+}
+
+
+
+body.dark-theme .timeline-container {
+    position: relative;
+}
+
+
+
+
+
+.certifications-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.certification-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Arrange items in a column */
+    justify-content: space-between; /* Space out items */
+    height: 100%; /* Ensure cards have equal height */
+    transition: transform 0.3s;
+}
+
+.certification-card:hover {
+    transform: translateY(-5px);
+}
+
+.certification-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.certification-card p {
+    font-size: 0.9rem;
+    margin-bottom: auto; /* Push content to the top */
+    color: #666;
+}
+
+.certification-card .view-cert-btn {
+    margin-top: 15px; /* Add space between the button and content above */
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #3f37c9;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.certification-card .view-cert-btn:hover {
+    background-color: #2b2c91;
+}
+
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cert-iframe {
+    width: 80%;
+    height: 80%;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.download-btn {
+    margin-top: 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.download-btn:hover {
+    background-color: #218838;
+}
+
+#timeline {
+    background-color: #f0f0f0;
+    padding: 50px 0;
+}
+
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 100%;
+    transform: translateX(-50%);
+}
+
+.timeline-date {
+    background-color: #3f37c9;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    width: 95px;
+    height: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.timeline-content {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+    flex: 1;
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+}
+
+.timeline-content p {
+    margin-bottom: 0;
+}
+
+.timeline-item {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.timeline-item.animate {
+    opacity: 1;
+}
+
+
+
+
+
+/* Keyframes for the fade and slide-up animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Certification Card Section Animation */
+.certifications-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Certification Card Animation */
+.certification-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Arrange items in a column */
+    justify-content: space-between; /* Space out items */
+    height: 100%; /* Ensure cards have equal height */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease-out; /* Apply fade-in effect */
+}
+
+
+/* Certification Card Button Animation */
+.certification-card .view-cert-btn {
+    margin-top: 15px; /* Add space between the button and content above */
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #3f37c9;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.certification-card .view-cert-btn:hover {
+    background-color: #2b2c91;
+    transform: scale(1.05); /* Slight scaling effect for the button */
+}
+
+/* Adding a delay for each card to create a staggered effect */
+.certification-card:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.certification-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.certification-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.certification-card:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+
+.certification-card:nth-child(5) {
+    animation-delay: 0.6s;
+}
+
+.certification-card:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.certification-card:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+.certification-card:nth-child(8) {
+    animation-delay: 0.6s;
+}
+
+.certification-card:nth-child(9) {
+    animation-delay: 0.6s;
+}
+
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensures it sits behind content */
+}
+
+
