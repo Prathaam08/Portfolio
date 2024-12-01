@@ -157,3 +157,19 @@ function isInViewport(el) {
     const rect = el.getBoundingClientRect();
     return rect.top <= window.innerHeight && rect.bottom >= 0;
 }
+
+
+
+window.addEventListener('scroll', function() {
+    const backToTopButton = document.getElementById('back-to-top');
+    if (window.scrollY > 300) {
+        backToTopButton.style.display = 'block';
+    } else {
+        backToTopButton.style.display = 'none';
+    }
+});
+
+document.getElementById('back-to-top').addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
