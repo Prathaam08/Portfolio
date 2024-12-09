@@ -173,3 +173,28 @@ document.getElementById('back-to-top').addEventListener('click', function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
+
+// Function to check if the element is in the viewport (trigger earlier)
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    // Trigger the animation when the top of the element is 150px before the bottom of the viewport
+    return rect.top <= window.innerHeight - 150 && rect.bottom >= 0;
+}
+
+// Function to add the 'visible' class when the element is in view
+function handleScroll() {
+    const elements = document.querySelectorAll('.hidden');
+    elements.forEach((element) => {
+        if (isInViewport(element)) {
+            element.classList.add('visible');
+        }
+    });
+}
+
+// Add the scroll event listener
+window.addEventListener('scroll', handleScroll);
+
+// Call the function once to show content if it's already in view
+handleScroll();
+
+
