@@ -93,19 +93,6 @@ nav ul li a:hover {
     border-color: #fff;
 }
 
-/* Mobile View (max-width: 768px) */
-@media screen and (max-width: 768px) {
-
-    nav ul li a {
-        color: black; /* White text for links */
-    }
-
-    nav ul li a:hover {
-        background: #444; /* Darker background on hover */
-        color: black; /* White text on hover */
-    }
-}
-
 /* Dark Mode Toggle */
 .theme-toggle {
     background: none;
