@@ -266,7 +266,18 @@ h2::after {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-
+/* Mobile-specific styles */
+@media (max-width: 767px) {
+    .certifications-container {
+        flex-direction: column; /* Stack cards vertically on mobile */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+    
+    .certification-card {
+        width: 90%; /* Set width to 90% for cards on mobile */
+        margin: 10px auto; /* Center cards and add space between them */
+    }
+}
 
 #resume {
     text-align: center;
