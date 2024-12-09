@@ -197,4 +197,7 @@ window.addEventListener('scroll', handleScroll);
 // Call the function once to show content if it's already in view
 handleScroll();
 
+window.onload = function() {
+    window.scrollTo(0, 0);  // Ensure the page starts at the top (if needed)
+}
 
