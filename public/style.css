@@ -913,3 +913,29 @@ body.dark-mode .back-to-top:hover {
 }
 
 
+/* Keyframes for fade-in and slide-up animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px); /* Start slightly lower */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Default state for elements to be hidden initially */
+.hidden {
+    opacity: 0;
+    transform: translateY(30px); /* Start slightly lower */
+    transition: opacity 0.8s ease, transform 0.8s ease; /* Increased duration */
+}
+
+/* Add this class when the element is in view */
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInUp 1.5s ease-out forwards; /* Slower animation */
+}
+
