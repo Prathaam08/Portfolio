@@ -952,3 +952,93 @@ body.dark-mode .back-to-top:hover {
     animation: fadeInUp 1.5s ease-out forwards; /* Slower animation */
 }
 
+
+
+
+
+/* For screens smaller than 768px (common mobile devices) */
+@media (max-width: 1080px) {
+    body {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    /* Adjust header content */
+    .header-container h1 {
+        font-size: 24px; /* Smaller header text */
+    }
+
+    .profile-photo {
+        width: 120px; /* Adjust image size */
+    }
+
+    /* Adjust navbar */
+    nav {
+        position: relative;
+    }
+
+
+    #nav-menu {
+        display: none; /* Hide the menu by default */
+        list-style: none;
+        padding: 0;
+    }
+
+    #nav-menu li {
+        margin: 10px 0;
+    }
+
+    #nav-menu a {
+        color: white; /* White text color for mobile */
+        text-decoration: none;
+    }
+
+    /* Show the nav menu when the hamburger icon is clicked */
+    .show-nav #nav-menu {
+        display: block;
+    }
+
+    /* Other adjustments for the mobile layout */
+    section {
+        padding: 20px;
+    }
+}
+
+/* For screens larger than 768px (tablets and desktops) */
+@media (min-width: 768px) {
+    nav {
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #nav-menu {
+        display: flex;
+    }
+
+    #nav-menu li {
+        margin: 0 15px;
+    }
+}
+
+
+/* For mobile view */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 0; /* Reduce padding */
+    }
+
+    .header-container h1 {
+        font-size: 24px; /* Smaller heading font size */
+        margin: 5px 0;
+    }
+
+    .header-container p {
+        font-size: 14px; /* Smaller subtitle font */
+    }
+
+    .profile-photo {
+        width: 100px; /* Further reduce profile photo size */
+        margin-top: 15px;
+    }
+}
