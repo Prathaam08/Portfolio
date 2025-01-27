@@ -104,6 +104,10 @@ const certificates = {
     'cert-pubspeak': {
         pdf: '/Public Speaking Certificate.pdf',
         title: 'Public Speaking Course: Improve Your Speaking Skills Fast'
+    },
+     'cert-tcs': {
+        pdf: 'TcsIon.pdf',
+        title: 'TCS iON Career Edge - Young Professional'
     }
 };
 
