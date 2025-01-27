@@ -1050,3 +1050,96 @@ body.dark-mode .back-to-top:hover {
         margin-top: 15px;
     }
 }
+
+/* Contact Section Styling */
+#contact {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+    border-radius: 8px;
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+#feedback-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+#feedback-form label {
+    font-weight: bold;
+    color: #555;
+    align-self: flex-start;
+}
+
+#feedback-form input,
+#feedback-form textarea {
+    width: 100%;
+    max-width: 600px;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Arial', sans-serif;
+}
+
+#feedback-form input:focus,
+#feedback-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#feedback-form textarea {
+    resize: vertical;
+}
+
+.submit-feedback-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-feedback-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Success/Error Message Styling */
+#form-response {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Social Links Styling */
+.social-links {
+    margin-top: 2rem;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #007bff;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #0056b3;
+}
