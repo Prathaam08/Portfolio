@@ -189,10 +189,54 @@
 </section>
 
     <!-- Contact Section -->
-    <section id="contact"  class="hidden">
+      <section id="contact" class="hidden">
         <h2>Contact Me</h2>
         <p>Email: <a href="mailto:morepratham48@gmail.com">morepratham48@gmail.com</a></p>
-        <div class="social-links">      
+        <form id="feedback-form" action="https://formspree.io/f/xgvoakda" method="POST">
+            <label for="user-email">Your Email:</label>
+            <input type="email" id="user-email" name="email" placeholder="Enter your email" required>
+            
+            <label for="feedback-message">Feedback:</label>
+            <textarea id="feedback-message" name="message" placeholder="Write your feedback here" rows="5" required></textarea>
+            
+            <button type="submit" class="submit-feedback-btn">Submit Feedback</button>
+        </form>
+        
+        <div id="form-response" style="display:none; margin-top:10px;"></div>
+        
+        <script>
+            const form = document.getElementById('feedback-form');
+            const responseDiv = document.getElementById('form-response');
+        
+            form.addEventListener('submit', async (event) => {
+                event.preventDefault();
+                const formData = new FormData(form);
+        
+                try {
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: { 'Accept': 'application/json' },
+                    });
+        
+                    if (response.ok) {
+                        responseDiv.style.color = 'green';
+                        responseDiv.textContent = 'Thank you! Your feedback has been sent.';
+                    } else {
+                        responseDiv.style.color = 'red';
+                        responseDiv.textContent = 'Oops! Something went wrong. Please try again later.';
+                    }
+                } catch (error) {
+                    responseDiv.style.color = 'red';
+                    responseDiv.textContent = 'An error occurred. Please check your internet connection.';
+                }
+        
+                responseDiv.style.display = 'block';
+                form.reset();
+            });
+        </script>
+        
+        <div class="social-links">
             <a href="https://github.com/Prathaam08" target="_blank" class="social-icon github">
                 <i class="fab fa-github"></i> 
             </a>
@@ -201,7 +245,7 @@
             </a>
             <a href="https://www.instagram.com/i.prathaam/" target="_blank" class="social-icon instagram">
                 <i class="fab fa-instagram"></i>
-                </a>
+            </a>
         </div>
     </section>
     
