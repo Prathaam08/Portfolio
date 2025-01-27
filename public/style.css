@@ -11,7 +11,10 @@ body {
     color: #333;
     background: #f3f4f6;
 }
-
+/* Prevent horizontal scrolling */
+body, html {
+    overflow-x: hidden;  /* Hide horizontal overflow */
+}
 .profile-photo {
     width: 150px; /* Adjusted size */
     height: 150px; /* Adjusted size */
