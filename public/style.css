@@ -1201,6 +1201,7 @@ body.dark-mode .back-to-top:hover {
     border-radius: 5px;
     font-size: 1rem;
     font-family: 'Arial', sans-serif;
+        margin-top: -41px;
 }
 
 #feedback-form input:focus,
