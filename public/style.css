@@ -1026,6 +1026,11 @@ body.dark-mode .back-to-top:hover {
     section {
         padding: 20px;
     }
+    
+    .back-to-top {
+        margin: 0px -35px;
+    }
+
 }
 
 /* For screens larger than 768px (tablets and desktops) */
