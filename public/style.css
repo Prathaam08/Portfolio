@@ -605,7 +605,7 @@ body.dark-theme #timeline {
 }
 
 body.dark-theme #timeline h2 {
-    color: #bb86fc; /* Light accent color for the section title */
+    color: #3f37c9; /* Light accent color for the section title */
 }
 
 body.dark-theme .timeline-container {
@@ -629,14 +629,93 @@ body.dark-theme .timeline-item h3 {
 }
 
 body.dark-theme .timeline-item p {
-    color: #2c2c2c; /* Light text color for paragraphs */
+    color: white; /* Light text color for paragraphs */
 }
-
-
 
 body.dark-theme .timeline-container {
     position: relative;
 }
+
+body.dark-theme .timeline-content{
+    background-color: #2c2c2c; /* Light text color for paragraphs */ 
+}
+/* Contact Section */
+body.dark-theme #contact {
+    background: #121212; /* Dark background for the contact section */
+    color: #e0e0e0; /* Light text color */
+    padding: 50px 0;
+}
+
+body.dark-theme .contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+body.dark-theme .contact-container h2 {
+    color: #bb86fc; /* Accent color for the section title */
+    margin-bottom: 20px;
+}
+
+body.dark-theme .contact-form {
+    background: #2c2c2c; /* Darker background for the form */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 500px;
+}
+
+body.dark-theme .contact-form input,
+body.dark-theme .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background: #333;
+    border: 1px solid #444;
+    color: #e0e0e0;
+    border-radius: 5px;
+}
+
+body.dark-theme .contact-form input::placeholder,
+body.dark-theme .contact-form textarea::placeholder {
+    color: #bbb; /* Lighter placeholder text */
+}
+
+body.dark-theme .contact-form button {
+    background: #3f37c9; /* Primary button color */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+body.dark-theme .contact-form button:hover {
+    background: #2b2c91; /* Slightly darker on hover */
+}
+
+body.dark-theme .contact-info {
+    margin-top: 20px;
+}
+
+body.dark-theme .contact-info p {
+    color: #e0e0e0;
+    margin: 5px 0;
+}
+
+body.dark-theme .contact-info a {
+    color: #bb86fc; /* Accent color for links */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+body.dark-theme .contact-info a:hover {
+    color: #e0e0e0; /* Light color on hover */
+}
+
 
 
 
@@ -940,6 +1019,11 @@ body.dark-theme .timeline-container {
     transform: scale(1.1);
 }
 
+
+
+
+
+
 /* Dark mode support */
 body.dark-mode .back-to-top {
     background-color: var(--dark-primary-color, #333);
@@ -1026,7 +1110,7 @@ body.dark-mode .back-to-top:hover {
     section {
         padding: 20px;
     }
-    
+
     .back-to-top {
         margin: 0px -35px;
     }
@@ -1091,7 +1175,7 @@ body.dark-mode .back-to-top:hover {
 #contact h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: #333;
+    color: #3f37c9;
 }
 
 #feedback-form {
@@ -1105,7 +1189,7 @@ body.dark-mode .back-to-top:hover {
 #feedback-form label {
     font-weight: bold;
     color: #555;
-    align-self: flex-start;
+    margin-right: 503px;
 }
 
 #feedback-form input,
