@@ -70,42 +70,56 @@ themeToggleButton.addEventListener('click', () => {
 // Map of certificate IDs to PDF paths
 const certificates = {
     'cert-wb': {
-        pdf: '/WebDevelopmentFundamentals-IBM.pdf',
+        pdf: 'certificate/WebDevelopmentFundamentals-IBM.pdf',
         title: 'Web Development Fundamentals'
     },
     'cert-ai': {
-        pdf: '/GettingStartedwithArtificialIntellige-IBM.pdf',
+        pdf: 'certificate/GettingStartedwithArtificialIntellige-IBM.pdf',
         title: 'Getting Started with Artificial Intellige'
     },
+    'cert-bcg': {
+        pdf: 'certificate/BCG_certificate.pdf',
+        title: 'GenAI job Stimulation'
+    },
     'cert-dt': {
-        pdf: '/Accenture certificate.pdf',
+        pdf: 'certificate/Accenture certificate.pdf',
         title: 'Developer and Technology Job Simulation'
     },
     'cert-sa': {
-        pdf: '/AWS certificate.pdf',
+        pdf: 'certificate/AWS certificate.pdf',
         title: 'Solution Architecture Job Simulation'
     },
     'cert-na': {
-        pdf: '/National Association of State Boards of Accountancy (NASBA).pdf',
+        pdf: 'certificate/National Association of State Boards of Accountancy (NASBA).pdf',
         title: 'What Is Generative AI?'
     },
     'cert-linkedin ai': {
-        pdf: '/linkedin-Agentic Ai.pdf',
+        pdf: 'certificate/linkedin-Agentic Ai.pdf',
         title: 'Fundamentals of Agentic AI: Business Implications and Ethical Insights'
     },
     'cert-linkedin prompt': {
-        pdf: '/linkedin-Prompt engineering.pdf',
+        pdf: 'certificate/linkedin-Prompt engineering.pdf',
         title: 'Introduction to Prompt Engineering for Generative AI (2023)'
     },
     'cert-next': {
-        pdf: '/next certificate.pdf',
+        pdf: 'certificate/next certificate.pdf',
         title: 'Responsive Web Design'
     },
     'cert-pubspeak': {
-        pdf: '/Public Speaking Certificate.pdf',
+        pdf: 'certificate/Public Speaking Certificate.pdf',
         title: 'Public Speaking Course: Improve Your Speaking Skills Fast'
+    },
+<<<<<<< HEAD
+    'cert-tcs': {
+        pdf: 'certificate/TcsIon.pdf',
+=======
+     'cert-tcs': {
+        pdf: 'TcsIon.pdf',
+>>>>>>> 1d1ba3313b012e1b109eec6d6850e47c164a24b9
+        title: 'TCS iON Career Edge - Young Professional'
     }
 };
+
 
 function openCertificate(certId) {
     const modal = document.getElementById('certModal');
@@ -200,4 +214,3 @@ handleScroll();
 window.onload = function() {
     window.scrollTo(0, 0);  // Ensure the page starts at the top (if needed)
 }
-

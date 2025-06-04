@@ -12,6 +12,9 @@ body {
     background: #f3f4f6;
 }
 
+
+
+
 .profile-photo {
     width: 150px; /* Adjusted size */
     height: 150px; /* Adjusted size */
@@ -56,7 +59,7 @@ header {
     margin: 0px 55px;
 }
 header h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 0.5rem;
     text-align: left; /* Keep text aligned to the left */
 }
@@ -72,7 +75,7 @@ nav ul {
     justify-content: center;
     list-style: none;
     margin-top: 6em;
-    gap: 1rem;
+    gap: 0.5rem;
     animation: fadeIn 1.5s ease-out;
 }
 
@@ -148,7 +151,7 @@ h2::after {
 /* Adjustments for Mobile View */
 @media (max-width: 768px) {
     #about {
-        padding: 50px 10px; /* Reduce padding for mobile */
+        padding: 80px 10px; /* Reduce padding for mobile */
     }
 
     #about h2 {
@@ -165,6 +168,10 @@ h2::after {
     #about .about-container {
         padding: 0 15px; /* Ensure there's space on the sides */
     }
+    .profile-photo{
+        margin: 0px 10px;
+    }
+
 }
 
 .about-container p {
@@ -176,8 +183,9 @@ h2::after {
 .project {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
     justify-content: center;
+    gap: 2rem;
+    padding: 2rem 0;
 }
 
 .project-card {
@@ -185,10 +193,14 @@ h2::after {
     border-radius: 10px;
     padding: 1.5rem;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    width: 30%;
+    width: 300px;
+    max-width: 90%;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: fadeInUp 1s ease-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .project-card:hover {
@@ -197,7 +209,7 @@ h2::after {
 }
 
 .project-card h3 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: #3f37c9;
     margin-bottom: 0.5rem;
 }
@@ -205,6 +217,7 @@ h2::after {
 .project-card p {
     color: #555;
     margin-bottom: 1rem;
+    font-size: 1rem;
 }
 
 .project-card a {
@@ -217,6 +230,8 @@ h2::after {
 .project-card a:hover {
     color: #3f37c9;
 }
+
+
 
 /* Skills Section */
 #skills ul {
@@ -277,6 +292,16 @@ h2::after {
         width: 90%; /* Set width to 90% for cards on mobile */
         margin: 10px auto; /* Center cards and add space between them */
     }
+}
+
+@media (max-width: 768px) {
+    .timeline-date{
+        margin: 10px ;
+    }
+.timeline-content{
+    margin: 0px 20px;
+}
+
 }
 
 #resume {
@@ -588,7 +613,7 @@ body.dark-theme #timeline {
 }
 
 body.dark-theme #timeline h2 {
-    color: #bb86fc; /* Light accent color for the section title */
+    color: #3f37c9; /* Light accent color for the section title */
 }
 
 body.dark-theme .timeline-container {
@@ -612,14 +637,93 @@ body.dark-theme .timeline-item h3 {
 }
 
 body.dark-theme .timeline-item p {
-    color: #2c2c2c; /* Light text color for paragraphs */
+    color: white; /* Light text color for paragraphs */
 }
-
-
 
 body.dark-theme .timeline-container {
     position: relative;
 }
+
+body.dark-theme .timeline-content{
+    background-color: #2c2c2c; /* Light text color for paragraphs */ 
+}
+/* Contact Section */
+body.dark-theme #contact {
+    background: #121212; /* Dark background for the contact section */
+    color: #e0e0e0; /* Light text color */
+    padding: 50px 0;
+}
+
+body.dark-theme .contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+body.dark-theme .contact-container h2 {
+    color: #bb86fc; /* Accent color for the section title */
+    margin-bottom: 20px;
+}
+
+body.dark-theme .contact-form {
+    background: #2c2c2c; /* Darker background for the form */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 500px;
+}
+
+body.dark-theme .contact-form input,
+body.dark-theme .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background: #333;
+    border: 1px solid #444;
+    color: #e0e0e0;
+    border-radius: 5px;
+}
+
+body.dark-theme .contact-form input::placeholder,
+body.dark-theme .contact-form textarea::placeholder {
+    color: #bbb; /* Lighter placeholder text */
+}
+
+body.dark-theme .contact-form button {
+    background: #3f37c9; /* Primary button color */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+body.dark-theme .contact-form button:hover {
+    background: #2b2c91; /* Slightly darker on hover */
+}
+
+body.dark-theme .contact-info {
+    margin-top: 20px;
+}
+
+body.dark-theme .contact-info p {
+    color: #e0e0e0;
+    margin: 5px 0;
+}
+
+body.dark-theme .contact-info a {
+    color: #bb86fc; /* Accent color for links */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+body.dark-theme .contact-info a:hover {
+    color: #e0e0e0; /* Light color on hover */
+}
+
 
 
 
@@ -923,6 +1027,11 @@ body.dark-theme .timeline-container {
     transform: scale(1.1);
 }
 
+
+
+
+
+
 /* Dark mode support */
 body.dark-mode .back-to-top {
     background-color: var(--dark-primary-color, #333);
@@ -1009,6 +1118,11 @@ body.dark-mode .back-to-top:hover {
     section {
         padding: 20px;
     }
+
+    .back-to-top {
+        margin: 0px -35px;
+    }
+
 }
 
 /* For screens larger than 768px (tablets and desktops) */
@@ -1050,3 +1164,127 @@ body.dark-mode .back-to-top:hover {
         margin-top: 15px;
     }
 }
+
+
+
+
+/* Contact Section Styling */
+#contact {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+    border-radius: 8px;
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #3f37c9;
+}
+
+#feedback-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+#feedback-form label {
+    font-weight: bold;
+    color: #555;
+    margin-right: 503px;
+}
+
+#feedback-form input,
+#feedback-form textarea {
+    width: 100%;
+    max-width: 600px;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Arial', sans-serif;
+<<<<<<< HEAD
+    margin-top: -41px;
+=======
+        margin-top: -41px;
+>>>>>>> 1d1ba3313b012e1b109eec6d6850e47c164a24b9
+}
+
+#feedback-form input:focus,
+#feedback-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#feedback-form textarea {
+    resize: vertical;
+}
+
+.submit-feedback-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-feedback-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Success/Error Message Styling */
+#form-response {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Social Links Styling */
+.social-links {
+    margin-top: 2rem;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #007bff;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #0056b3;
+}
+
+
+
+
+
+/* Hide the navbar in mobile view (screen width <= 768px) */
+@media (max-width: 768px) {
+    nav {
+        display: none
+    }
+}
+
+ 
+@media (max-width: 768px) {
+    header {
+        padding: 50px 0; /* Smaller margin for mobile view */
+    }
+}
+
+
+
+
+
