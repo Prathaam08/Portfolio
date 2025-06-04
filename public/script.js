@@ -109,13 +109,8 @@ const certificates = {
         pdf: 'certificate/Public Speaking Certificate.pdf',
         title: 'Public Speaking Course: Improve Your Speaking Skills Fast'
     },
-<<<<<<< HEAD
     'cert-tcs': {
         pdf: 'certificate/TcsIon.pdf',
-=======
-     'cert-tcs': {
-        pdf: 'TcsIon.pdf',
->>>>>>> 1d1ba3313b012e1b109eec6d6850e47c164a24b9
         title: 'TCS iON Career Edge - Young Professional'
     }
 };
