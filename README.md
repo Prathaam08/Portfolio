@@ -65,5 +65,5 @@ Compatible with all modern browsers:
 
 ## 💬 Contact
 
-Created with ❤️ by **[Pratham More]**  
+Created with ❤️ by **Pratham More**  
 📧 Feel free to reach out at: `morepratham48@gmail.com`
