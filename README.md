@@ -1,6 +1,5 @@
-# 🌐 Modern Portfolio Website
+# 🌐 Portfolio Website
 
-![Portfolio Screenshot](https://via.placeholder.com/800x400?text=Portfolio+Screenshot)
 
 ## 📝 Overview
 
