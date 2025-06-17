@@ -531,7 +531,7 @@ section {
 }
 
 .timeline-item:nth-child(odd) {
-  padding-right: calc(50% + 30px);
+  padding-right: calc(49% + 30px);
   text-align: right;
 }
 
@@ -663,7 +663,7 @@ section {
 
 .certificate-overlay .btn {
   margin: 0;
-  padding: 10px 25px;
+  padding: 10px 46px;
 }
 
 .certificate-info {
@@ -856,6 +856,7 @@ section {
 }
 
 .contact-form .btn {
+  /* margin: 0px 58px; */
   width: 100%;
   padding: 16px;
   font-size: 1rem;
@@ -1000,10 +1001,16 @@ footer {
 
   .timeline-item:nth-child(even) .timeline-content::after,
   .timeline-item:nth-child(odd) .timeline-content::after {
-    left: 25px;
+    left: -13px;
     right: auto;
   }
+
+  .contact-form .btn {
+      margin: 0px 38px;
 }
+
+}
+
 
 @media (max-width: 768px) {
   .hamburger {
